@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Email</title>
+	<style type="text/css">
+
+		table {
+			vertical-align: baseline;
+
+			margin: 0;
+			border: 0;
+			border-collapse: collapse;
+			border-spacing: 0;
+			padding: 0;
+		}
+
+		tbody,
+		tr {
+			vertical-align: baseline;
+
+			border: 0;
+			margin: 0;
+			padding: 0;
+		}
+
+		td {
+			vertical-align: top;
+
+			margin: 0;
+			border: 0;
+			border-collapse: collapse;
+			padding: 0;
+
+			font: inherit;
+			font-family: Verdana, Geneva, Arial, sans-serif;
+			font-smoothing: antialiased;
+
+			word-break: break-word;
+			word-wrap: break-word;
+
+			-ms-text-size-adjust: 100%;
+			-webkit-text-size-adjust: none;
+		}
+
+		.l-full-w { /* tag table */
+			min-width: 100%;
+			width: 100%;
+		}
+
+
+
+		.l-content-center {
+			/* leave it to centralize the main content box
+			if the email is too long and cropped inside
+			of some email agents like:
+			Gmail Chrome - Windows 7
+			Gmail Firefox - OSX 10.10
+			Gmail Firefox - Windows 7
+			Gmail IE 10 - Windows 7
+			Gmail IE 11 - Windows 7
+			Gmail Safari - OSX 10.10
+			etc. */
+			table-layout: fixed;
+		}
+
+		.l-content-center__item {
+			height: 10px;
+
+			font-family: Arial;
+			font-size: 14px; /* doesn't work if less then font-size: 14px; - don't know why */
+			line-height: 10px; /* has to be the same as height otherwise will have white background what not possible to remove with background property */
+			letter-spacing: 0.12px; /* doesn't work if less then letter-spacing: 0.12px; - don't know why */
+		}
+
+
+
+		.b-col-empty {
+			height: 10px;
+			font-size: 10px;
+			line-height: 10px;
+			letter-spacing: 0;
+		}
+
+
+
+		.b-content {
+			width: 600px;
+		}
+
+
+
+		.b-box {
+			background-color: #fff;
+			box-shadow: 0 5px 40px rgba(0, 0, 0, .1);
+		}
+
+	</style>
+</head>
+<body>
+	<table bgcolor="#f7f7f7" style="background-color: #f7f7f7;" class="l-full-w">
+		<tbody>
+			<tr>
+				<td>
+					<table class="l-content-center l-full-w">
+						<tbody>
+							<tr>
+								<td class="l-content-center__item">&nbsp;</td>
+								<td class="l-content-center__item b-content"></td>
+								<td class="l-content-center__item">&nbsp;</td>
+							</tr>
+							<tr>
+								<td>&nbsp;</td>
+								<td class="b-content">
+									<table class="l-full-w">
+										<tbody>
+											<tr>
+												<td class="b-box">
+													Content
+												</td>
+											</tr>
+										</tbody>
+									</table>
+								</td>
+								<td>&nbsp;</td>
+							</tr>
+						</tbody>
+					</table>
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</body>
+</html>

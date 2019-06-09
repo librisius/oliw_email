@@ -1,0 +1,9 @@
+{
+  "name": "OliwCSS",
+  "version": "0.1.0",
+  "devDependencies": {
+    "gulp": "^4.0.2",
+    "gulp-inline-css": "^3.3.2"
+  },
+  "dependencies": {}
+}
