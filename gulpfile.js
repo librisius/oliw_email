@@ -6,7 +6,11 @@ var gulp 					= require('gulp'),
 
 gulp.task('watch', function(done) {
 
-	gulp.watch( 'code/**/*.html', html );
+	gulp.watch([
+		'code/**/*.html',
+
+		'!code/result/**/*.html',
+		], html );
 });
 
 
