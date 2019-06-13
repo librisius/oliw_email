@@ -4,13 +4,9 @@ var gulp 					= require('gulp'),
 
 
 
-gulp.task('watch', function(done) {
+gulp.task('watch', function() {
 
-	gulp.watch([
-		'code/**/*.html',
-
-		'!code/result/**/*.html',
-		], html );
+	gulp.watch( 'code/*.html', gulp.parallel('html') );
 });
 
 
@@ -21,9 +17,8 @@ gulp.task('default', gulp.series('watch'));
 
 
 
-function html() {
-
-	gulp.src('code/**/*.html')
+gulp.task('html', function() {
+	return gulp.src('code/*.html')
 
 		.pipe(
 			inlineCss({
@@ -36,4 +31,4 @@ function html() {
 		.pipe(
 			gulp.dest('code/result')
 		);
-}
+});
