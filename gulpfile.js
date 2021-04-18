@@ -6,7 +6,7 @@ var gulp 					= require('gulp'),
 
 gulp.task('watch', function() {
 
-	gulp.watch( 'code/*.html', gulp.parallel('html') );
+	gulp.watch( ['code/*.html', 'code/*.css'], gulp.parallel('html') );
 });
 
 
@@ -18,6 +18,7 @@ gulp.task('default', gulp.series('watch'));
 
 
 gulp.task('html', function() {
+
 	return gulp.src('code/*.html')
 
 		.pipe(
